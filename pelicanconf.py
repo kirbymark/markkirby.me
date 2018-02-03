@@ -6,6 +6,7 @@ DELETE_OUTPUT_DIRECTORY = True
 
 AUTHOR = 'Mark Kirby'
 SITENAME = 'markkirby.me'
+SITEBANNER = 'Mark Kirby'
 SITESUBTITLE = 'Technology Doer'
 SITEURL = 'http://localhost:8000'
 

@@ -1716,14 +1716,14 @@ div.info {
 		}
 
 		.image.avatar48 {
-			width: 48px;
-			height: 48px;
+			width: 120px;
+			height: 120px;
 			background: #f00;
 		}
 
 			.image.avatar48 img {
-				width: 48px;
-				height: 48px;
+				width: 120px;
+				height: 120px;
 			}
 
 		.image.fit {
@@ -2076,6 +2076,7 @@ div.info {
 
 	#nav ul {
 		margin-bottom: 0;
+		margin-top:100px;
 	}
 
 		#nav ul li a {
