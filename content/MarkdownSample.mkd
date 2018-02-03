@@ -1,0 +1,19 @@
+Title: A Markdown example
+Date: 2018-01-31 18:24
+Date: 2018-02-01 08:12
+Category: Blogging
+Tags: Blog Setup
+Slug: a-markdown-example
+Authors: Mark Kirby
+Summary: This is just and example
+
+I wanted to show an example using *Markdown*
+
+> A block quotation will wrap and flow, and can have *inline*
+``markup`` just like a regular paragraph.  It will be indented on
+the left (and possibly the right) margins, and may have a vertical
+quotation line on the left.
+
+
+Link to picture
+[Mark Kirby]({filename}/images/MJKSmallDenim.jpg)

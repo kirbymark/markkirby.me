@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% block content %}
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							{% for article in articles_page.object_list %}
+							<article class="box post post-excerpt">
+								<header> 
+									<h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> 
+									<p>{{article.headline}}</p>
+								</header>
+								<div class="info">
+									<span class="date" datetime="{{ article.date.isoformat() }}"><span class="month">{{ article.date | strftime('%b')  }}</span> <span class="day">{{ article.date | strftime('%d')  }}</span> <span class="month"> {{ article.date | strftime('%Y')  }}</span></span>
+								</div>
+							<div class="entry-content"> &nbsp; </div>
+							</article>
+							{% endfor %}
+
+							<div class="inner">
+								{% if articles_page.has_other_pages() %}
+								{% include 'pagination.html' %}
+								{% endif %}
+							</div>
+						
+						</div>
+					</section>
+
+				<!-- Projects -->
+					<section id="projects" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Projects</h2>
+							</header>
+
+							<p>Current Projects</p>
+
+							<div class="row">
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="/theme/images/pic02.jpg" alt="" /></a>
+										<header>
+											<h3>Ipsum Feugiat</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="/theme/images/pic03.jpg" alt="" /></a>
+										<header>
+											<h3>Rhoncus Semper</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="/theme/images/pic04.jpg" alt="" /></a>
+										<header>
+											<h3>Magna Nullam</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="/theme/images/pic05.jpg" alt="" /></a>
+										<header>
+											<h3>Natoque Vitae</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u$ 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="/theme/images/pic06.jpg" alt="" /></a>
+										<header>
+											<h3>Dolor Penatibus</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="/theme/images/pic07.jpg" alt="" /></a>
+										<header>
+											<h3>Orci Convallis</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About Me</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="/theme/images/pic08.jpg" alt="" /></a>
+
+							<p>Just a writeup here</p>
+
+						</div>
+					</section>
+					
+					
+				<!-- Resume -->
+					<section id="resume" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Resume</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="/theme/images/pic08.jpg" alt="" /></a>
+
+							<p>Link to Resume</p>
+
+						</div>
+					</section>
+					
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy;&nbsp;2018&nbsp;&nbsp;Mark Kirby</li>
+						<li>Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.</li>
+                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        <li>Modified under a <a href="https://creativecommons.org/licenses/by/3.0/">CC:BY</a> license.</li>
+                    </ul>	
+			</div>
+			
+		<!-- Scripts -->
+			<script src="/theme/js/jquery.min.js"></script>
+			<script src="/theme/js/jquery.scrolly.min.js"></script>
+			<script src="/theme/js/jquery.scrollzer.min.js"></script>
+			<script src="/theme/js/skel.min.js"></script>
+			<script src="/theme/js/util.js"></script>
+			<!--[if lte IE 8]><script src="/theme/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/theme/js/main.js"></script>
+
+
+{% endblock content %}
