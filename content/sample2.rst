@@ -7,7 +7,7 @@ ReStructuredText Overview
 :category: Blogging
 :slug: rst-overview
 :authors: Mark Kirby
-:summary: A summary of rst
+:summary: This should show up here
 
 =========================================
 ReStructuredText (rst): plain text markup

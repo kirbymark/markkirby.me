@@ -5,7 +5,7 @@ Category: Blogging
 Tags: Blog Setup
 Slug: a-markdown-example
 Authors: Mark Kirby
-Summary: This is just and example
+Summary: This should show up
 
 I wanted to show an example using *Markdown*
 
