@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 DELETE_OUTPUT_DIRECTORY = True
 
 AUTHOR = 'Mark Kirby'
-SITENAME = 'Mark Kirby'
+SITENAME = 'markkirby.me'
 SITESUBTITLE = 'Technology Doer'
 SITEURL = 'http://localhost:8000'
 

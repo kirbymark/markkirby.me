@@ -5,69 +5,57 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html lang="{{ DEFAULT_LANG }}">
-<head>
-        {% block head %}
-		    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-			{% if FEED_ALL_ATOM %}
-			<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
-			{% endif %}
-			{% if FEED_ALL_RSS %}
-			<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
-			{% endif %}
-			{% if FEED_ATOM %}
-			<link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
-			{% endif %}
-			{% if FEED_RSS %}
-			<link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
-			{% endif %}
-			{% if CATEGORY_FEED_ATOM and category %}
-			<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
-			{% endif %}
-			{% if CATEGORY_FEED_RSS and category %}
-			<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
-			{% endif %}
-			{% if TAG_FEED_ATOM and tag %}
-			<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
-			{% endif %}
-			{% if TAG_FEED_RSS and tag %}
-			<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
-			{% endif %}
+  <head>
+      {% block head %}
+		  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+      <link rel="shortcut icon" href="./theme/images/favicon.ico">
+  		<!--
+      	{% if FEED_ALL_ATOM %} 	<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />	{% endif %}
+  			{% if FEED_ALL_RSS %}		<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />		{% endif %}
+  			{% if FEED_ATOM %}			<link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />     			{% endif %}
+  			{% if FEED_RSS %} 			<link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />       			{% endif %}
+  			{% if CATEGORY_FEED_ATOM and category %}	<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />			{% endif %}
+  			{% if CATEGORY_FEED_RSS and category %} 	<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />   			{% endif %}
+  			{% if TAG_FEED_ATOM and tag %}      			<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />                			{% endif %}
+  			{% if TAG_FEED_RSS and tag %}       			<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />                   			{% endif %}
+      -->
         {% endblock head %}
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="/theme/css/main.css" />
-		<!--[if lte IE 8]><script src="/theme/js/ie/html5shiv.js"></script><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="/theme/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="/theme/css/ie9.css" /><![endif]-->
-</head>
-
-<body>
+    <link rel="stylesheet" href="./theme/css/main.css" />
+		<!--[if lte IE 8]><script src="./theme/js/ie/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="./theme/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="./theme/css/ie9.css" /><![endif]-->
+  </head>
+  <body>
 	<!-- Header -->
 				<div id="header">
 					<div class="top">
 						<!-- Logo -->
 							<div id="logo">
-								<span class="image avatar48"><img src="/theme/images/avatar.jpg" alt="" /></span>
+								<span class="image avatar48"><img src="./theme/images/avatar.jpg" alt="" /></span>
 								<h1 id="title"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
 								<p>{{ SITESUBTITLE }}</p>
 							</div>
 
 						<!-- Nav -->
-							<nav id="nav">
-								<!--
-									Prologue's nav expects links in one of two formats:
-									1. Hash link (scrolls to a different section within the page)
-									   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
-									2. Standard link (sends the user to another page/site)
-									   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
-								-->
-								<ul>
-									<li><a href="{{ SITEURL }}/#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Home</span></a></li>
-									<li><a href="{{ SITEURL }}/#projects" id="project-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Projects</span></a></li>
-									<li><a href="{{ SITEURL }}/#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
-									<li><a href="{{ SITEURL }}/#resume" id="resume-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Resume</span></a></li>
-								</ul>
-							</nav>
+            <nav id="nav">
+            <!--
+            		Prologue's nav expects links in one of two formats:
+            		1. Hash link (scrolls to a different section within the page)
+            				<li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+            		2. Standard link (sends the user to another page/site)
+            				<li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+            	-->
+            	<ul>
+            		<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
+            		<li><a href="#blog" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-align-left">Blog</span></a></li>
+            		<li><a href="#project" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-wrench">Projects</span></a></li>
+            		<li><a href="#read" id="about-link" class="skel-layers-ignoreHref"><span class="icon icon fa-book">Reading List</span></a></li>
+            		<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
+            		<li><a href="#resume" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Resume</span></a></li>
+            	</ul>
+            </nav>
 
 					</div>
 
@@ -90,6 +78,14 @@
         {% block content %}
         {% endblock %}
 
-		
+
+        <!-- Scripts -->
+    		<script src="/theme/js/jquery.min.js"></script>
+    		<script src="/theme/js/jquery.scrolly.min.js"></script>
+    		<script src="/theme/js/jquery.scrollzer.min.js"></script>
+    		<script src="/theme/js/skel.min.js"></script>
+    		<script src="/theme/js/util.js"></script>
+    		<!--[if lte IE 8]><script src="/theme/js/ie/respond.min.js"></script><![endif]-->
+    		<script src="/theme/js/main.js"></script>
 </body>
 </html>
