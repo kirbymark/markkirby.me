@@ -1555,7 +1555,8 @@ div.info {
   width: 10%;
   float: left;
   text-align: left;
-  line-height: 100px;
+	margin-left: 5px;
+  line-height: 15px;
 }
 
 
@@ -1730,6 +1731,7 @@ div.info {
 			.image.avatar48 img {
 				width: 120px;
 				height: 120px;
+				box-shadow: 0px 0px 20px 5px rgba(255,255,255,.4);
 			}
 
 		.image.fit {
@@ -2346,7 +2348,7 @@ div.info {
 							grid-template-areas:
 							  "im im im im im im im im im im   im   im   im   im   im"
 							  "hd hd hd hd hd hd hd hd hd hd   hd   hd   hd   hd   hd"
-							  "md md md md md su su su su su   su   su   su   su   su";
+							  "md md md su su su su su su su   su   su   su   su   su";
 							}
 						}
 
@@ -2357,6 +2359,47 @@ div.info {
 							padding-left: 5px;
 							text-align: left;
 						}
+
+						.art-summary p {
+							font-size: 18px;
+							line-height: 20px;
+							margin-bottom: 0.5em;
+						}
+
+/* Date */
+.date {
+  position: relative;
+  width: 70px;
+  font-family: Georgia, serif;
+  color: #0a3c99;
+  margin: 0 auto;
+ }
+
+.day, .month, .year {
+  position: absolute;
+  }
+
+.day {
+  font-size: 30px;
+  top: 15px;
+  }
+
+.month {
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  }
+
+.year {
+  top: 19px;
+  right: 0;
+	color: #3274F1;
+  font-size: 22px;
+  rotation: -90deg !important;
+  /* ** Hacks ** */
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  }
 
 /* Wide */
 

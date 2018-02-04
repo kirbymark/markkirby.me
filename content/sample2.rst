@@ -7,7 +7,8 @@ ReStructuredText Overview
 :category: Blogging
 :slug: rst-overview
 :authors: Mark Kirby
-:summary: This should show up here
+:headline:  The is a ReStructuredText Example Post
+:summary: This is a summary of the article
 
 =========================================
 ReStructuredText (rst): plain text markup

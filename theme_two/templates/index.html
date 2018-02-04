@@ -46,7 +46,11 @@
 																</div>
 																<div class="art-meta">
 																		<div class="info">
-																				<span class="date" datetime="{{ article.date.isoformat() }}"><span class="month">{{ article.date | strftime('%b')  }}</span> <span class="day">{{ article.date | strftime('%d')  }}</span> <span class="month"> {{ article.date | strftime('%Y')  }}</span></span>
+																				<div class="date">
+																						<span class="day">{{ article.date | strftime('%d')  }}</span>
+																						<span class="month">{{ article.date | strftime('%b')  }}</span>
+																						<span class="year"> {{ article.date | strftime('%Y')  }}</span>
+																				</div>
 																		</div>
 																</div>
 																<div class="art-summary">

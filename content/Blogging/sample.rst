@@ -6,7 +6,7 @@ Silly ReStructuredText Example
 :tags: Blog Setup
 :slug: rst-example
 :authors: Mark Kirby
-:headline:  This is important
+:headline:  The headline is here
 :summary:
     Multi-line metadata should be supported
     as well as **inline markup**.
