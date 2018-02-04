@@ -6,6 +6,7 @@
 
 				<!-- Intro -->
 					<section id="top" class="one dark cover">
+
 						<div class="container">
 
 							<header>
@@ -22,20 +23,30 @@
 
 					<!-- Blog -->
 						<section id="blog" class="two dark">
-							<div class="container">
 
-								{% for article in articles_page.object_list %}
-								<article class="box post post-excerpt">
-									<header>
-										<h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
-										<p>{{article.headline}}</p>
-									</header>
-									<div class="info">
-										<span class="date" datetime="{{ article.date.isoformat() }}"><span class="month">{{ article.date | strftime('%b')  }}</span> <span class="day">{{ article.date | strftime('%d')  }}</span> <span class="month"> {{ article.date | strftime('%Y')  }}</span></span>
-									</div>
-								<div class="entry-content"> &nbsp; </div>
-								</article>
-								{% endfor %}
+							<!-- Grid -->
+							<div class="container">
+						  	 <div class="outerwrap">
+								 {% for article in articles_page.object_list %}
+														<div class="wrapper">
+																<div class="art-image">Image</div>
+																<div class="art-head">
+																		<header>
+																				<h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.headline }}</a></h2>
+																	  </header>
+																</div>
+																<div class="art-meta">
+																		<div class="info">
+																				<span class="date" datetime="{{ article.date.isoformat() }}"><span class="month">{{ article.date | strftime('%b')  }}</span> <span class="day">{{ article.date | strftime('%d')  }}</span> <span class="month"> {{ article.date | strftime('%Y')  }}</span></span>
+																		</div>
+																</div>
+																<div class="art-summary">
+																		<p>{{article.summary}}</p>
+																</div>
+														</div>
+									{% endfor %}
+				         </div>
+							</div>
 
 								<div class="inner">
 									{% if articles_page.has_other_pages() %}
@@ -43,7 +54,6 @@
 									{% endif %}
 								</div>
 
-							</div>
 						</section>
 
 
