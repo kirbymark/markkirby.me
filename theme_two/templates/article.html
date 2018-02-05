@@ -3,9 +3,9 @@
 		  {{ super() }}
 		  {% if article.description %}
 			<meta name="description" content="{{article.summary}}" />
-		  {% endif %}	
+		  {% endif %}
 
-	  
+
 		  {% for tag in article.tags %}
 			<meta name="tags" content="{{tag}}" />
 		  {% endfor %}
@@ -14,8 +14,8 @@
 
 {% block content %}
 
-  
-  
+
+
 	<!-- Main -->
 			<div id="main">
 
@@ -23,8 +23,8 @@
 					<section id="top" class="one dark cover">
 						<div class="container">
 
-						    <header> 
-								<h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> 
+						    <header>
+								<h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
 								<p>{{article.headline}}</p>
 							</header>
 
@@ -32,14 +32,14 @@
 								<span class="date" datetime="{{ article.date.isoformat() }}"><span class="month">{{ article.date | strftime('%b')  }}</span> <span class="day">{{ article.date | strftime('%d')  }}</span> <span class="month"> {{ article.date | strftime('%Y')  }}</span></span>
 								<ul class="stats">
                                     <li><a href="mailto:?Subject={{article.title}}&Body=I%20saw%20this%20and%20thought%20of%20you!%20 {{ SITEURL }}/{{ article.url }}" class="icon fa-envelope">&nbsp;</a></li>
-                                    <li><a href="http://reddit.com/submit?url={{ SITEURL }}/{{ article.url }}&title=#{{article.title}}"" class="icon fa-reddit">&nbsp;</a></li>
+                                    <li><a href="http://reddit.com/submit?url={{ SITEURL }}/{{ article.url }}&title=#{{article.title}}" class="icon fa-reddit">&nbsp;</a></li>
                                     <li><a href="https://twitter.com/share?url={{ SITEURL }}/{{ article.url }}&text=&hashtags=GnotC" class="icon fa-twitter">&nbsp;</a></li>
                                     <li><a href="https://www.facebook.com/sharer.php?u={{ SITEURL }}/{{ article.url }}" class="icon fa-facebook">&nbsp;</a></li>
                                 </ul>
-							</div><!-- /.post-info -->							
-		
+							</div><!-- /.post-info -->
+
 							{{ article.content }}
-						
+
 							 <div class="pagination">
 								{% if article.prev_article %}
 								<a class="button previous" href="{{ SITEURL }}/{{ article.prev_article.url}}">
@@ -50,11 +50,11 @@
 									<a href="{{ SITEURL }}/{{ article.next_article.url}}" class="button next">{{ article.next_article.title }}</a>
 								{% endif %}
 							</div>
-							
-						
+
+
 						</div>
 					</section>
-					
+
 			</div>
 
 		<!-- Footer -->
@@ -66,9 +66,9 @@
                 which takes great advantage of <a href="http://python.org">Python</a>.</li>
                         <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
                         <li>Modified under a <a href="https://creativecommons.org/licenses/by/3.0/">CC:BY</a> license.</li>
-                    </ul>	
+                    </ul>
 			</div>
-			
+
 		<!-- Scripts -->
 			<script src="/theme/js/jquery.min.js"></script>
 			<script src="/theme/js/jquery.scrolly.min.js"></script>
@@ -77,5 +77,15 @@
 			<script src="/theme/js/util.js"></script>
 			<!--[if lte IE 8]><script src="/theme/js/ie/respond.min.js"></script><![endif]-->
 			<script src="/theme/js/main.js"></script>
+      <script>
+					$(document).ready(function() {
+						  $("#intro-link").attr("href", "{{ SITEURL }}/#intro");
+							$("#blog-link").attr("href", "{{ SITEURL }}/#blog");
+							$("#project-link").attr("href", "{{ SITEURL }}/#project");
+							$("#read-link").attr("href", "{{ SITEURL }}/#read");
+							$("#about-link").attr("href", "{{ SITEURL }}/#about");
+							$("#resume-link").attr("href", "{{ SITEURL }}/#resume");
+					});
+			</script>
 
 {% endblock content %}
