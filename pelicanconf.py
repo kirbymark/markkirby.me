@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 DELETE_OUTPUT_DIRECTORY = True
+LOAD_CONTENT_CACHE = False
 
 AUTHOR = 'Mark Kirby'
 SITENAME = 'markkirby.me'
